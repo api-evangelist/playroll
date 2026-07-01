@@ -1,0 +1,219 @@
+{
+  "info": {
+    "name": "Playroll Partner API (Modeled Scaffold)",
+    "description": "SCAFFOLD ONLY. Playroll does not publish a public API reference. This collection models Playroll's partner/enterprise integration surface (EOR, contractor management, global payroll, workforce data) from public product and partner materials. {{baseUrl}} and request/response shapes are placeholders to be completed by approved partners once granted sandbox access by Playroll.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.playroll.example/partner",
+      "type": "string",
+      "description": "Placeholder. Real base URL is provided to approved integration partners by Playroll."
+    },
+    {
+      "key": "apiToken",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{apiToken}}",
+        "type": "string"
+      }
+    ]
+  },
+  "item": [
+    {
+      "name": "Workers (EOR Employees)",
+      "description": {
+        "content": "Modeled Employer of Record employee lifecycle endpoints. Not confirmed against a public reference.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "name": "List EOR employees (modeled)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/v1/workers",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "v1",
+                "workers"
+              ]
+            },
+            "description": "MODELED, not confirmed. List full-time employees hired through Playroll's Employer of Record entities."
+          },
+          "response": []
+        },
+        {
+          "name": "Onboard EOR employee (modeled)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/v1/workers",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "v1",
+                "workers"
+              ]
+            },
+            "description": "MODELED, not confirmed. Initiate onboarding of a new EOR employee in a supported country."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Contractors",
+      "description": {
+        "content": "Modeled contractor management endpoints.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "name": "List contractors (modeled)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/v1/contractors",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "v1",
+                "contractors"
+              ]
+            },
+            "description": "MODELED, not confirmed. List contractors managed through Playroll."
+          },
+          "response": []
+        },
+        {
+          "name": "Onboard contractor (modeled)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/v1/contractors",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "v1",
+                "contractors"
+              ]
+            },
+            "description": "MODELED, not confirmed. Onboard and contract a new international contractor."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Global Payroll",
+      "description": {
+        "content": "Modeled global payroll endpoints.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "name": "List payroll runs (modeled)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/v1/payroll/runs",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "v1",
+                "payroll",
+                "runs"
+              ]
+            },
+            "description": "MODELED, not confirmed. List global payroll runs across entities and countries."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Workforce Data (HRIS Sync)",
+      "description": {
+        "content": "Modeled bi-directional workforce data endpoints behind Playroll's Open API / HRIS connectors.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "name": "Get employee record (modeled)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/v1/employees/:employee_id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "v1",
+                "employees",
+                ":employee_id"
+              ],
+              "variable": [
+                {
+                  "key": "employee_id",
+                  "value": "",
+                  "description": "The Playroll employee identifier."
+                }
+              ]
+            },
+            "description": "MODELED, not confirmed. Retrieve an employee record for bi-directional sync with HRIS tools (HiBob, BambooHR) via Playroll's Open API."
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

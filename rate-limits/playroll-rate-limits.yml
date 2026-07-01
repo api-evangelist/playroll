@@ -1,0 +1,52 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Playroll
+providerId: playroll
+created: '2026-07-01'
+modified: '2026-07-01'
+reconciled: false
+tags:
+- HR
+- Employer of Record
+- Global Payroll
+- Rate Limiting
+- Quotas
+- Throttling
+description: >-
+  Playroll does not publish public API rate limits or quotas. Its developer
+  surface is partner- and enterprise-gated: sandbox access, documentation,
+  and any applicable throttling limits are provided directly to approved
+  integration partners rather than published on a public developer portal.
+  No public rate-limit numbers, throttling response codes, or quota tables
+  are discoverable, so the values below are unreconciled placeholders to be
+  confirmed with Playroll's solutions-engineering team during a partner
+  engagement.
+notes: >-
+  No public rate-limit documentation exists for Playroll as of the review
+  date. Confirm concrete limits, throttling behavior, and retry semantics
+  directly with Playroll when granted sandbox access.
+sources:
+- https://www.playroll.com/partners
+- https://playroll.com/integrations
+responseCodes:
+  throttled: see provider (not publicly documented)
+limits:
+- name: Partner API Limits
+  scope: partner
+  metric: requests
+  limit: see partner agreement
+  notes: Not publicly documented; provided to approved integration partners in sandbox/onboarding.
+- name: Bi-Directional Sync
+  scope: integration
+  metric: sync operations
+  limit: see partner agreement
+  notes: HRIS Open API / connector sync cadence and limits are configured per integration.
+policies:
+- name: Gated Access
+  description: API and sandbox access is granted to approved partners; there is no public self-serve tier with published limits.
+- name: Backoff Strategy
+  description: In the absence of documented limits, partners should implement exponential backoff with jitter and honor any Retry-After headers Playroll returns.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

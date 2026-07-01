@@ -1,0 +1,130 @@
+aid: playroll
+url: https://raw.githubusercontent.com/api-evangelist/playroll/refs/heads/main/apis.yml
+name: Playroll
+kind: company
+description: Playroll is a global HR platform providing Employer of Record (EOR),
+  contractor management, and global payroll across 180+ countries. It runs local
+  payroll, statutory benefits, and compliance for distributed teams, and offers a
+  partner/enterprise integration surface - native HRIS connectors (HiBob, BambooHR),
+  an "Open API" for bi-directional HR data sync, and custom/embedded integration
+  builds. The developer API is partner- and enterprise-gated; sandbox access and
+  documentation are provided to integration partners rather than published on a
+  public developer portal.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- HR
+- Employer of Record
+- EOR
+- Global Payroll
+- Contractor Management
+- Global Employment
+- HRIS
+- Compliance
+created: '2026-07-01'
+modified: '2026-07-01'
+specificationVersion: '0.19'
+apis:
+- aid: playroll:playroll-eor-api
+  name: Playroll EOR API
+  tags:
+  - Employer of Record
+  - EOR
+  - Global Employment
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.playroll.com/employer-of-record
+  description: Partner/enterprise integration surface for Playroll's Employer of
+    Record product - hire, onboard, and manage full-time employees in 180+ countries
+    through Playroll's owned entities without your business setting up local
+    entities. Exposed to integration partners via Playroll's Open API and custom
+    builds; endpoints are modeled, not confirmed from a public reference.
+  properties:
+  - url: https://www.playroll.com/employer-of-record
+    type: Documentation
+  - url: https://playroll.com/integrations
+    type: Integrations
+- aid: playroll:playroll-contractor-management-api
+  name: Playroll Contractor Management API
+  tags:
+  - Contractor Management
+  - Contractors
+  - Compliance
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.playroll.com/pricing/employer-of-record
+  description: Onboard, contract, and pay international contractors compliantly in
+    180+ regions. Modeled as part of Playroll's partner integration surface for
+    contractor lifecycle and payments; not a publicly documented endpoint set.
+  properties:
+  - url: https://www.playroll.com/
+    type: Documentation
+  - url: https://playroll.com/integrations
+    type: Integrations
+- aid: playroll:playroll-global-payroll-api
+  name: Playroll Global Payroll API
+  tags:
+  - Global Payroll
+  - Payroll
+  - Payments
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.playroll.com/workforce-management-software
+  description: Run and consolidate global payroll across entities and countries,
+    with statutory calculations and local pay runs. Surfaced to partners for
+    payroll data sync and reporting via Playroll's Open API; endpoints modeled
+    from product capabilities rather than a published API reference.
+  properties:
+  - url: https://www.playroll.com/workforce-management-software
+    type: Documentation
+  - url: https://playroll.com/integrations
+    type: Integrations
+- aid: playroll:playroll-workforce-data-api
+  name: Playroll Workforce Data API
+  tags:
+  - HRIS
+  - Workforce
+  - Employee Data
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://playroll.com/integrations
+  description: Bi-directional workforce/employee data sync surface behind Playroll's
+    Open API and native HRIS connectors (HiBob, BambooHR), keeping employee records,
+    org data, and documents aligned across an integrated HR/finance stack. Modeled
+    from Playroll's integrations product; not a public developer reference.
+  properties:
+  - url: https://playroll.com/integrations
+    type: Integrations
+  - url: https://www.playroll.com/partners
+    type: Documentation
+- aid: playroll:playroll-partner-integration-api
+  name: Playroll Partner Integration API
+  tags:
+  - Partners
+  - Embedded
+  - White Label
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.playroll.com/partners
+  description: The gated developer entry point for ATS, HRIS, accounting, and
+    workforce platforms that want to embed Playroll (integrate, co-sell, reseller/
+    white-label). Partners receive sandbox access and documentation from Playroll's
+    solutions-engineering team; no self-serve public API keys or open docs portal
+    are published.
+  properties:
+  - url: https://www.playroll.com/partners
+    type: Documentation
+  - url: https://www.playroll.com/white-label-hr-software
+    type: WhiteLabel
+common:
+- type: LinkedIn
+  url: https://www.linkedin.com/company/playroll
+- type: Website
+  url: https://www.playroll.com
+- type: Documentation
+  url: https://playroll.com/integrations
+- type: Partners
+  url: https://www.playroll.com/partners
+- type: Plans
+  url: plans/playroll-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/playroll-rate-limits.yml
+- type: FinOps
+  url: finops/playroll-finops.yml
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

@@ -1,0 +1,117 @@
+aid: playroll
+name: Playroll
+review:
+  question: Does Playroll expose a public, self-serve, documented developer API?
+  answer: false
+  date: '2026-07-01'
+  reviewer: API Evangelist
+  openapiCreated: false
+  openapiScopeNote: |
+    No public OpenAPI/API reference is published by Playroll, and no
+    self-serve developer portal (e.g. docs.playroll.* or api.playroll.*)
+    is discoverable. Playroll references an "Open API" and offers custom/
+    embedded integration builds, but access is partner- and enterprise-
+    gated: sandbox access and documentation are provided directly to
+    integration partners rather than published. For that reason NO
+    OpenAPI artifact was authored - inventing endpoints would misrepresent
+    the surface. The API entries in apis.yml are modeled from documented
+    product capabilities and are marked as such.
+findings:
+  summary: |
+    Playroll (playroll.com) is a global HR / Employer of Record (EOR),
+    contractor management, and global payroll platform operating in 180+
+    countries. It has a genuine integration/developer surface, but it is
+    NOT a public, self-serve API:
+
+    - Playroll markets an "Open API" for bi-directional sync of HR data
+      with a customer's HR tools, plus native HRIS connectors (HiBob -
+      Platinum partner, BambooHR - Gold partner) and expense integrations
+      (Expensify).
+    - The partner program lists an explicit "API Integration" track
+      ("Embed Playroll directly into your tech stack") alongside affiliate,
+      referral, co-sell, and reseller/white-label tracks.
+    - Partner tiers advertise "Sandbox & documentation provided" (Silver),
+      "Solutions-engineering hours" (Gold), and a "Custom integration
+      roadmap" (Platinum). Playroll states its team "works with you through
+      the process rather than handing over documentation and stepping
+      away," i.e. hands-on, gated integration rather than open self-serve.
+    - No public developer documentation portal, published OpenAPI/API
+      reference, webhook specification, or list of endpoints was found.
+    - No public Playroll GitHub organization was found (github.com/playroll
+      returns 404), so no GitHubOrganization common property was added and
+      no source-controlled SDKs were located.
+
+    Conclusion: a valid catalog entry describing the product, its
+    integration surface, and the gated/partner-only nature of the API -
+    rather than a fabricated public API - is the honest representation.
+  apiAvailability:
+    state: partner-and-enterprise-gated
+    publicSelfServeApi: false
+    openApiMentionedByVendor: true
+    publicDeveloperPortal: false
+    publicOpenApiSpec: false
+    publicWebhookDocs: false
+    publicGitHubOrg: false
+    nativeConnectors:
+      - HiBob (Platinum partner, bi-directional sync)
+      - BambooHR (Gold partner, API/custom sync)
+      - Expensify (Gold partner, one-way sync)
+    integrationTracks:
+      - Affiliate Link
+      - Referral Registration
+      - API Integration (embed in tech stack)
+      - Co-Sell
+      - Reseller / White-Label
+    accessModel: |
+      Sandbox access and documentation are provided to approved integration
+      partners by Playroll's solutions-engineering team. There is no public
+      sign-up-and-get-a-key developer experience.
+  endpointsConfirmed: []
+  endpointsModeled:
+    - EOR: hire / onboard / manage full-time employees via Playroll entities
+    - Contractor Management: onboard / contract / pay international contractors
+    - Global Payroll: run / consolidate pay runs, statutory calculations, reporting
+    - Workforce Data: bi-directional employee / org / document sync (Open API + HRIS connectors)
+    - Partner Integration: gated embed / white-label integration entry point
+  modelingNote: |
+    The endpoints above are MODELED from Playroll's public product and
+    partner marketing, not confirmed from an API reference. Path shapes,
+    verbs, and auth are illustrative. The Postman and Open Collection
+    artifacts use placeholder base URL {{baseUrl}} and are scaffolds for
+    partners to complete once granted sandbox access, not verified calls.
+sources:
+  - url: https://www.playroll.com/
+    type: Website
+    note: Global HR, payroll and compliance platform; 180+ countries.
+  - url: https://playroll.com/integrations
+    type: Integrations
+    note: Native HiBob/BambooHR/Expensify connectors; states "the Playroll API is available for custom builds" and hands-on integration support.
+  - url: https://www.playroll.com/partners
+    type: Documentation
+    note: Five partnership tracks incl. "API Integration"; Silver tier "Sandbox & documentation provided"; Gold "Solutions-engineering hours"; Platinum "Custom integration roadmap."
+  - url: https://www.playroll.com/employer-of-record
+    type: Documentation
+    note: EOR product - local payroll, benefits, HRIS integration, employee documents.
+  - url: https://www.playroll.com/white-label-hr-software
+    type: Documentation
+    note: White-label / reseller HR software for payroll & EOR services.
+  - url: https://www.playroll.com/pricing/employer-of-record
+    type: Pricing
+    note: EOR / contractor / global payroll PEPM pricing (see plans artifact).
+  - url: https://github.com/playroll
+    type: GitHubOrganization
+    note: Returns HTTP 404 - no public Playroll GitHub organization found; GitHubOrganization common property intentionally omitted.
+actions:
+  openapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    Built a company-level catalog entry with five modeled API entries
+    reflecting Playroll's EOR, contractor, global payroll, workforce-data,
+    and partner-integration surfaces. Omitted openapi/ and GitHubOrganization
+    because neither a public API reference nor a public GitHub org exists.
+    Documented the partner/enterprise-gated availability state honestly here
+    and in apis.yml descriptions, and shipped Postman + Open Collection
+    scaffolds clearly marked as partner-completable rather than verified.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

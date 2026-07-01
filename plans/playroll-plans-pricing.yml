@@ -1,0 +1,129 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Playroll
+providerId: playroll
+created: '2026-07-01'
+modified: '2026-07-01'
+reconciled: false
+tags:
+- HR
+- Employer of Record
+- EOR
+- Global Payroll
+- Contractor Management
+- Plans
+description: >-
+  Playroll prices its global employment products on a per-employee-per-month
+  (PEPM) basis - a flat monthly fee per worker for Employer of Record (EOR),
+  a lower flat monthly fee per contractor for Contractor Management, and a
+  small PEPM fee for Global Payroll. Compliance, local payroll, and statutory
+  benefits are included in the fixed fee. Larger and enterprise/white-label
+  deals are sales-quoted. Playroll does NOT publish separate API/developer
+  pricing; API and integration access is delivered through partner and
+  enterprise engagements rather than metered API billing.
+notes: >-
+  PEPM figures below are representative published rates surfaced from
+  Playroll's pricing pages and third-party listings and are subject to
+  change and to a refundable security deposit (approximately one month's
+  salary) on EOR onboarding. Confirm current rates and terms with Playroll
+  sales during reconciliation. No public API usage pricing exists.
+sources:
+- https://www.playroll.com/pricing/employer-of-record
+- https://www.playroll.com/employer-of-record
+- https://www.playroll.com/partners
+plans:
+- id: playroll-eor
+  name: Employer of Record (EOR)
+  type: subscription
+  description: >-
+    Flat monthly fee per full-time employee hired through Playroll's local
+    entities in 180+ countries. Includes compliant local payroll, statutory
+    benefits, and dedicated support. A fully refundable security deposit
+    (approximately one month's salary) applies at onboarding.
+  entries:
+  - label: EOR per employee
+    name: eor_pepm
+    type: recurring
+    metric: employees
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: from $399 per employee / month
+    userMultiplied: true
+  elements:
+  - name: Local Payroll
+  - name: Statutory Benefits
+  - name: Compliance
+  - name: Employee Documents
+  - name: Dedicated Support
+- id: playroll-contractor-management
+  name: Contractor Management
+  type: subscription
+  description: >-
+    Flat monthly fee per contractor for compliant onboarding, contracts, and
+    payments across 180+ regions.
+  entries:
+  - label: Contractor per month
+    name: contractor_pepm
+    type: recurring
+    metric: contractors
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: from $35 per contractor / month
+    userMultiplied: true
+  elements:
+  - name: Contractor Onboarding
+  - name: Compliant Contracts
+  - name: Contractor Payments
+- id: playroll-global-payroll
+  name: Global Payroll
+  type: subscription
+  description: >-
+    Per-employee-per-month fee to run and consolidate payroll for your own
+    entities across countries, with statutory calculations and reporting.
+  entries:
+  - label: Global Payroll per employee
+    name: global_payroll_pepm
+    type: recurring
+    metric: employees
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: from $2.07 per employee / month
+    userMultiplied: true
+  elements:
+  - name: Multi-Country Pay Runs
+  - name: Statutory Calculations
+  - name: Payroll Reporting
+- id: playroll-enterprise
+  name: Enterprise / White-Label & API Integration
+  type: enterprise
+  description: >-
+    Sales-quoted agreements for enterprise volume, reseller/white-label HR
+    software, and embedded/API integration. Sandbox access, documentation,
+    and solutions-engineering hours are provided to partners; there is no
+    self-serve metered API pricing. Contact Playroll sales / partnerships.
+  entries:
+  - label: Enterprise / Partner Agreement
+    name: enterprise
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: year
+    geo: global
+    unit: 1
+    price: contact sales
+    userMultiplied: false
+  elements:
+  - name: Volume Pricing
+  - name: White-Label / Reseller
+  - name: API Integration (sandbox + docs)
+  - name: Solutions Engineering
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
