@@ -111,6 +111,8 @@ apis:
   - url: https://www.playroll.com/white-label-hr-software
     type: WhiteLabel
 common:
+- type: DomainSecurity
+  url: security/playroll-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/playroll
 - type: Website
@@ -125,6 +127,8 @@ common:
   url: rate-limits/playroll-rate-limits.yml
 - type: FinOps
   url: finops/playroll-finops.yml
+- url: https://www.playroll.com/blog
+  type: Blog
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
