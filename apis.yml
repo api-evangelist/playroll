@@ -37,6 +37,14 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/playroll.p
 tags:
 - HR
 - Employer of Record
+- Global Payroll
+- Contractor Management
+- Global Employment
+- HRIS
+- Compliance
+tags_raw:
+- HR
+- Employer of Record
 - EOR
 - Global Payroll
 - Contractor Management
@@ -50,6 +58,9 @@ apis:
 - aid: playroll:playroll-eor-api
   name: Playroll EOR API
   tags:
+  - Employer of Record
+  - Global Employment
+  tags_raw:
   - Employer of Record
   - EOR
   - Global Employment
