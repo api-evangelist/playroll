@@ -1,4 +1,4 @@
-# Playroll (playroll)
+# Playroll
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,131 +66,111 @@
 
 Playroll is a global HR platform providing Employer of Record (EOR), contractor management, and global payroll across 180+ countries. It runs local payroll, statutory benefits, and compliance for distributed teams, and offers a partner/enterprise integration surface - native HRIS connectors (HiBob, BambooHR), an "Open API" for bi-directional HR data sync, and custom/embedded integration builds. The developer API is partner- and enterprise-gated; sandbox access and documentation are provided to integration partners rather than published on a public developer portal.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/playroll/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/playroll/refs/heads/main/apis.yml)
+**Areas:** Human Resources · Employer of Record · Global Payroll · Contractor Management · Global Employment · HRIS · Compliance · Payroll
 
-## API Availability
+## Playroll on APIs.io
 
-Playroll has a genuine integration/developer surface but **no public, self-serve API**. There is no public developer portal, no published OpenAPI/API reference, no public webhook documentation, and no public Playroll GitHub organization. Access to the "Open API," sandbox, and documentation is granted to approved integration partners through Playroll's partner program and solutions-engineering team. The API entries below are **modeled** from Playroll's public product and partner materials, not confirmed from an API reference. See [review.yml](review.yml) for the full availability assessment.
+Everything profiled for Playroll is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/playroll/](https://apis.io/providers/playroll/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (5)
 
-- HR
-- Employer of Record
-- EOR
-- Global Payroll
-- Contractor Management
-- Global Employment
-- HRIS
-- Compliance
+- [Playroll EOR API](https://apis.io/apis/playroll/playroll-eor-api/) — Partner/enterprise integration surface for Playroll's Employer of Record product - hire, onboard, and manage full-time employees in 180+ countries through…
+- [Playroll Contractor Management API](https://apis.io/apis/playroll/playroll-contractor-management-api/) — Onboard, contract, and pay international contractors compliantly in 180+ regions. Modeled as part of Playroll's partner integration surface for contractor…
+- [Playroll Global Payroll API](https://apis.io/apis/playroll/playroll-global-payroll-api/) — Run and consolidate global payroll across entities and countries, with statutory calculations and local pay runs. Surfaced to partners for payroll data sync…
+- [Playroll Workforce Data API](https://apis.io/apis/playroll/playroll-workforce-data-api/) — Bi-directional workforce/employee data sync surface behind Playroll's Open API and native HRIS connectors (HiBob, BambooHR), keeping employee records, org…
+- [Playroll Partner Integration API](https://apis.io/apis/playroll/playroll-partner-integration-api/) — The gated developer entry point for ATS, HRIS, accounting, and workforce platforms that want to embed Playroll (integrate, co-sell, reseller/ white-label).…
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-07-01
-- **Modified:** 2026-07-01
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Collections (1)
 
-### Playroll EOR API
+Postman and Open Collection request collections.
 
-Partner/enterprise integration surface for Playroll's Employer of Record product - hire, onboard, and manage full-time employees in 180+ countries through Playroll's owned entities without your business setting up local entities. Exposed to integration partners via Playroll's Open API and custom builds; endpoints are modeled, not confirmed from a public reference.
+- [Playroll Partner API (Modeled Scaffold)](https://apis.io/collections/playroll/open-playroll/)
 
-- **Human URL:** [https://www.playroll.com/employer-of-record](https://www.playroll.com/employer-of-record)
+#### Security (1)
 
-#### Tags
+Authentication, trust centre, and vulnerability disclosure.
 
-- Employer of Record
-- EOR
-- Global Employment
+- [Playroll Domain Security](https://apis.io/security/playroll/playroll-domain-security/)
 
-#### Properties
+#### Plans and pricing (1)
 
-- [Documentation](https://www.playroll.com/employer-of-record)
-- [Integrations](https://playroll.com/integrations)
+Published plans, tiers and prices.
 
-### Playroll Contractor Management API
+- [Playroll Plans Pricing](https://apis.io/plans/playroll/playroll-plans-pricing/)
 
-Onboard, contract, and pay international contractors compliantly in 180+ regions. Modeled as part of Playroll's partner integration surface for contractor lifecycle and payments; not a publicly documented endpoint set.
+#### Rate limits (1)
 
-- **Human URL:** [https://www.playroll.com/pricing/employer-of-record](https://www.playroll.com/pricing/employer-of-record)
+Published request limits.
 
-#### Tags
+- [Playroll Rate Limits](https://apis.io/rate-limits/playroll/playroll-rate-limits/)
 
-- Contractor Management
-- Contractors
-- Compliance
+#### FinOps (1)
 
-#### Properties
+What the API costs to run, by operation.
 
-- [Documentation](https://www.playroll.com/)
-- [Integrations](https://playroll.com/integrations)
+- [Playroll Finops](https://apis.io/finops/playroll/playroll-finops/)
 
-### Playroll Global Payroll API
+## Where to find this API
 
-Run and consolidate global payroll across entities and countries, with statutory calculations and local pay runs. Surfaced to partners for payroll data sync and reporting via Playroll's Open API; endpoints modeled from product capabilities rather than a published API reference.
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-- **Human URL:** [https://www.playroll.com/workforce-management-software](https://www.playroll.com/workforce-management-software)
-
-#### Tags
-
-- Global Payroll
-- Payroll
-- Payments
-
-#### Properties
-
-- [Documentation](https://www.playroll.com/workforce-management-software)
-- [Integrations](https://playroll.com/integrations)
-
-### Playroll Workforce Data API
-
-Bi-directional workforce/employee data sync surface behind Playroll's Open API and native HRIS connectors (HiBob, BambooHR), keeping employee records, org data, and documents aligned across an integrated HR/finance stack. Modeled from Playroll's integrations product; not a public developer reference.
-
-- **Human URL:** [https://playroll.com/integrations](https://playroll.com/integrations)
-
-#### Tags
-
-- HRIS
-- Workforce
-- Employee Data
-
-#### Properties
-
-- [Integrations](https://playroll.com/integrations)
-- [Documentation](https://www.playroll.com/partners)
-
-### Playroll Partner Integration API
-
-The gated developer entry point for ATS, HRIS, accounting, and workforce platforms that want to embed Playroll (integrate, co-sell, reseller/white-label). Partners receive sandbox access and documentation from Playroll's solutions-engineering team; no self-serve public API keys or open docs portal are published.
-
-- **Human URL:** [https://www.playroll.com/partners](https://www.playroll.com/partners)
-
-#### Tags
-
-- Partners
-- Embedded
-- White Label
-
-#### Properties
-
-- [Documentation](https://www.playroll.com/partners)
-- [White Label](https://www.playroll.com/white-label-hr-software)
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/playroll)
 - [Website](https://www.playroll.com)
 - [Documentation](https://playroll.com/integrations)
-- [Partners](https://www.playroll.com/partners)
-- [Plans](plans/playroll-plans-pricing.yml)
-- [Rate Limits](rate-limits/playroll-rate-limits.yml)
-- [Fin Ops](finops/playroll-finops.yml)
+- [Blog](https://www.playroll.com/blog)
 
-## Collections
+## API Evangelist rating
 
-- [Postman Collection](collections/playroll.postman_collection.json) — modeled scaffold, partner-completable
-- [Open Collection](collections/playroll.opencollection.json) — modeled scaffold, partner-completable
+**Kin Score 9.0** — minimal · rubric 0.24.0 · scored 2026-10-17
 
-## Maintainers
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 7.9 |
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Agent readiness 0.6** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Employment & Payroll
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/playroll/](https://apis.io/providers/playroll/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Playroll: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/playroll/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
